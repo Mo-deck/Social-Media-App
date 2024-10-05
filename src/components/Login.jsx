@@ -1,11 +1,10 @@
 import { useState } from "react"
 
-const Login = () =>{
+const Login = (props) =>{
     const [username,setUsername] = useState("")
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log(username);
-        
+        props.setUser(username)  
     }
     return(
         <div>

@@ -1,10 +1,11 @@
+import { useState } from 'react';
 import Login from './components/Login';
 
 
 const App = () => {
-  let user = ""
+  const [user,setUser] = useState("")
 
-  if(!user) return <Login />
+  if(!user) return <Login setUser={setUser} />
     return(    
       <h1>App</h1>
     )
